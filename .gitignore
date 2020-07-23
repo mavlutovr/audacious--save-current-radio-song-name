@@ -1,3 +1,7 @@
+# Config
+config/local.yaml
+
+
 # Logs
 logs
 *.log

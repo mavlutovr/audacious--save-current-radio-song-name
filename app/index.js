@@ -5,7 +5,7 @@ const alert = require('alert');
 
 
 exec('audtool current-song', (error, stdout, stderr) => {
-  
+
   if (error) {
     console.error(`error: ${error.message}`);
   }
@@ -45,16 +45,16 @@ exec('audtool current-song', (error, stdout, stderr) => {
   }
 
 
-  // H1
-  if (fileContent === '') {
-    fileContent = '# Radio songs\n\n'+
-    '## 1\n';
-  }
-
-
   // Add
   // Markdown style
   if (config.format === 'markdown') {
+
+    // H1
+    if (fileContent === '') {
+      fileContent = '# Radio songs\n\n'+
+      '## 1\n';
+    }
+
 
     let lines = fileContent.split('\n');
     let addBeforeH2 = false;
@@ -85,6 +85,17 @@ exec('audtool current-song', (error, stdout, stderr) => {
 
     // Save
     fs.writeFileSync(config.file, modifiedFileContent);
+  }
+
+
+  // Plain style
+  else {
+
+    // Add song
+    fileContent += songName+'\n';
+
+    // Save
+    fs.writeFileSync(config.file, fileContent);
   }
 
 
