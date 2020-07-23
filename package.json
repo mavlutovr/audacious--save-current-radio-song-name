@@ -1,0 +1,33 @@
+{
+  "name": "audacious--save-current-radio-song-name",
+  "version": "0.0.1",
+  "description": "Short way to save current radio song name from Audacious",
+  "main": "app/index.js",
+  "dependencies": {
+    "alert": "^5.0.1",
+    "config": "^3.3.1",
+    "js-yaml": "^3.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mavlutovr/audacious--save-current-radio-song-name.git"
+  },
+  "keywords": [
+    "audasious",
+    "save",
+    "current",
+    "song",
+    "track",
+    "name"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mavlutovr/audacious--save-current-radio-song-name/issues"
+  },
+  "homepage": "https://github.com/mavlutovr/audacious--save-current-radio-song-name#readme"
+}
