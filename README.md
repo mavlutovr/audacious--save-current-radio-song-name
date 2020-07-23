@@ -8,7 +8,9 @@ Then, after download the songs, you can add new section at top. And songs names 
 
 ![](demo2.gif)
 
-Note: sections work just in markdown mode.
+Reason to leave downloaded songs in file is disable to add same song in feature.
+
+Sections work just in markdown mode.
 
 For work with markdown files you can use [https://typora.io/](https://typora.io/).
 
