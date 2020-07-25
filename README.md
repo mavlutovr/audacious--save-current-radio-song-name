@@ -38,13 +38,13 @@ npm install
 Create a config file;
 
 ```shell
-cp config/default.yaml config/default.yaml
+cp config/default.yaml config/local.yaml
 ```
 
 Modify config file:
 
 ```shell
-nano config/default.yaml
+nano config/local.yaml
 ```
 
 ## Create a shortcut
