@@ -1,6 +1,6 @@
 {
   "name": "audacious--save-current-radio-song-name",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Short way to save current radio song name from Audacious",
   "main": "app/index.js",
   "dependencies": {
