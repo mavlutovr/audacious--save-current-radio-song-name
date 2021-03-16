@@ -40,7 +40,7 @@ exec('audtool current-song', (error, stdout, stderr) => {
 
   // Already exists
   if (fileContent.indexOf(songName+'\n') !== -1) {
-    alert('The song was added before.', 'notify-send');
+    alert('The song was added before.');
     return;
   }
 
@@ -99,5 +99,5 @@ exec('audtool current-song', (error, stdout, stderr) => {
   }
 
 
-  alert('The song is added.', 'notify-send');
+  alert('The song is added.');
 });
