@@ -58,7 +58,7 @@ exec('audtool current-song', (error, stdout, stderr) => {
 
     let lines = fileContent.split('\n');
     let addBeforeH2 = false;
-    let added = false;
+    let addedToH2 = false;
     let modifiedFileContent = '';
 
     for (let i in lines) {
@@ -66,20 +66,23 @@ exec('audtool current-song', (error, stdout, stderr) => {
       let line = lines[i];
 
       // H2
-      if (line.indexOf('##') !== -1) {
+			if (!addedToH2) {
+				if (line.indexOf('##') !== -1) {
 
-        if (addBeforeH2) {
-          added = true;
-          modifiedFileContent += '- [ ] ' + songName + '\n';
-        }
+					if (addBeforeH2) {
+						addedToH2 = true;
+						modifiedFileContent += '- [ ] ' + songName + '\n';
+					}
 
-        addBeforeH2 = true;
-      }
+					addBeforeH2 = true;
+				}
+			}
+      
 
       modifiedFileContent += line + '\n';
     }
 
-    if (!added) {
+    if (!addedToH2) {
       modifiedFileContent += '- [ ] ' + songName;
     }
 
