@@ -6,7 +6,7 @@
   "dependencies": {
     "alert": "^5.0.1",
     "config": "^3.3.1",
-    "js-yaml": "^3.14.0"
+    "js-yaml": "^4.1.1"
   },
   "devDependencies": {},
   "scripts": {
